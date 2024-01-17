@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" class="top-navbar">
+  <button mat-button *ngFor="let item of navbarItems" [routerLink]="item.link">
+    {{ item.name }}
+  </button>
+
+  <button mat-button [routerLink]="'/CRUDAdmin/product-list'">Manage Products</button>
+
+</mat-toolbar>
