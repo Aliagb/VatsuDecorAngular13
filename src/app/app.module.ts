@@ -19,6 +19,8 @@ import { ProductEditComponent } from './CRUDAdmin/product-edit/product-edit.comp
 import { ProductDetailComponent } from './CRUDAdmin/product-detail/product-detail.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     MatGridListModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

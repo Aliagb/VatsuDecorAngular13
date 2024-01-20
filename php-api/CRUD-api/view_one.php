@@ -2,7 +2,8 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-// get passed parameter value, in this case, the record ID
+
+// passed parameter value, recordId
 $id=isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record ID not found.');
  
 include '../config/Database.php';

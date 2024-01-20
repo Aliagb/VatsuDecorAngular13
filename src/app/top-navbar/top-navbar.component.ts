@@ -13,8 +13,13 @@ export class TopNavbarComponent implements OnInit {
   constructor(private uiService: UIService) { }
 
   ngOnInit(): void {
-    this.uiService.getNavbarItems().subscribe(data => {
-      this.navbarItems = data;
-    });
+    this.uiService.getNavbarItems().subscribe(
+      data => {
+        this.navbarItems = data;
+      },
+      error => {
+        console.error('Error fetching navbar items', error);
+      }
+    );
   }
 }

@@ -1,1 +1,33 @@
-<p>product-add works!</p>
+<div class="product-add-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Add New Product</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit($event)">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="product.name" name="name" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="product.description" name="description" required></textarea>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Quantity</mat-label>
+            <input matInput [(ngModel)]="product.qty" name="qty" type="number" min="1" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="product.price" name="price" type="number" min="0" required>
+          </mat-form-field>
+      
+          <button mat-raised-button color="primary" type="submit">Add Product</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

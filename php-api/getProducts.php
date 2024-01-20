@@ -38,8 +38,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $products[] = $row;
 }
 
-$stmt->closeCursor(); // Use closeCursor() for PDO instead of close()
-$con = null; // Use null assignment for closing PDO connection
+$stmt->closeCursor(); 
+$con = null; 
 
 echo json_encode($products);
 

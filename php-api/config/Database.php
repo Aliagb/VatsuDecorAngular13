@@ -11,8 +11,6 @@ private $con;
 public function connect() {
     $this->con = null;
 
-
-
     try {
         $this->con = new PDO(
             "mysql:host=" . $this->host . 
@@ -21,17 +19,12 @@ public function connect() {
             $this->password
         );
         $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        // Log success message
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
-    
-  
-// show error
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
 
-return $this->con;
+    return $this->con;
 }
 }
-

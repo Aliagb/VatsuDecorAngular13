@@ -22,7 +22,6 @@ $email = $data['email'];
 $password = $data['password'];
 
 if (empty($username) || empty($email) || empty($password)) {
-    // Return an error response
     http_response_code(400);
     echo json_encode(['message' => 'Incomplete user data.']);
     exit();

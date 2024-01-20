@@ -3,13 +3,10 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
  
-// check if form was submitted
 if($_POST){
     include '../config/Database.php';
     try{
-        // write update query
-        // in this case, it seemed like we have so many fields to pass and 
-        // it is better to label them and not use question marks
+
         $query = "UPDATE products 
                     SET p_name=:name, p_description=:description, p_price=:price 
                     WHERE p_id = :id";
@@ -29,7 +26,6 @@ if($_POST){
         $stmt->bindParam(':price', $price);
         $stmt->bindParam(':id', $id);
          
-        // Execute the query
         if($stmt->execute()){
             echo json_encode(array('result'=>'success'));
         }else{
