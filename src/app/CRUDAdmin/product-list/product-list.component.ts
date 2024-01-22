@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/product.model';
 import { CRUDProductService } from '../../crudproduct.service';
-import { UIService } from 'src/app/ui.service';
 
 @Component({
   selector: 'app-product-list',
@@ -11,12 +10,11 @@ import { UIService } from 'src/app/ui.service';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
-  displayedColumns: string[] = ['id', 'image', 'name', 'description', 'price', 'actions'];
+  displayedColumns: string[] = ['id', 'image', 'name', 'description', 'qty', 'price', 'actions'];
 
   constructor(
     private crudProductService: CRUDProductService,
-    private uiService: UIService,
-    private router: Router  // Router injected here
+    private router: Router  
   ) {}
 
   ngOnInit(): void {
@@ -38,9 +36,12 @@ export class ProductListComponent implements OnInit {
   navigateToAddProduct(): void {
     this.router.navigate(['/add-product']);
   }
+  editProduct(productId: number): void {
+    this.router.navigate(['/edit-product', productId]);
+  }
 
-  editProduct(product: Product): void {
-    // Logic to edit product
+  viewSingleProduct(productId: number) {
+    this.router.navigate(['/edit-product', productId]);
   }
 
 deleteProduct(productId: number): void {

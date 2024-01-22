@@ -13,7 +13,7 @@ if (!$con) {
     exit;
 }
 // fetch all data 
-$query = "SELECT product_id, name, description, price, img FROM products ORDER BY product_id ASC";
+$query = "SELECT product_id, name, description, qty, price, img FROM products ORDER BY product_id ASC";
 $stmt = $con->prepare($query);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -2,28 +2,40 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Content-Type: application/json; charset=UTF-8');
 
-// passed parameter value, recordId
-$id=isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record ID not found.');
- 
-include '../config/Database.php';
- 
-// read current record's data
-try {
-    $query = "SELECT p_id, p_name, p_description, p_price FROM products WHERE p_id = ? LIMIT 0,1";
-    $stmt = $con->prepare( $query );
- 
-    $stmt->bindParam(1, $id);
- 
-    $stmt->execute();
- 
-    // store retrieved row to a variable
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $json = json_encode($row);
-    echo $json;
+include_once '../config/Database.php';
+include_once '../models/Product.php';
+
+$database = new Database();
+$con = $database->connect();
+
+if (!$con) {
+    echo json_encode(["message" => "Failed to connect to the database"]);
+    exit;
 }
- 
-catch(PDOException $exception){
-    die('ERROR: ' . $exception->getMessage());
+
+$product = new Product($con);
+
+$product->product_id = isset($_GET['product_id']) ? $_GET['product_id'] : die();
+
+$product->getProductById();
+
+if($product->name != null){
+    $product_arr = array(
+        "product_id" =>  $product->product_id,
+        "name" => $product->name,
+        "description" => $product->description,
+        "qty" => $product->qty,
+        "price" => $product->price
+    );
+
+    http_response_code(200);
+
+    echo json_encode($product_arr);
+} else{
+    http_response_code(404);
+
+    echo json_encode(array("message" => "Product does not exist."));
 }
 ?>

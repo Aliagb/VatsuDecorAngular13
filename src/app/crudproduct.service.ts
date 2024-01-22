@@ -27,12 +27,24 @@ export class CRUDProductService {
   }
 
   // Update
-  updateProduct(productId: number, productData: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/update.php?id=${productId}`, productData);
+  updateProduct(productData: Product): Observable<any> {
+    const formData = new FormData();
+    if (productData.product_id !== undefined) {
+      formData.append('id', productData.product_id.toString());
+  }    formData.append('name', productData.name);
+    formData.append('description', productData.description);
+    formData.append('price', productData.price.toString());
+    formData.append('qty', productData.qty.toString());
+
+    return this.http.post(`${this.apiUrl}/update.php`, formData);
   }
 
   // Delete
   deleteProduct(productId: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/delete.php?id=${productId}`);
+  }
+
+  getProductById(productId: number): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/view_one.php?product_id=${productId}`);
   }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 17, 2024 at 07:01 PM
+-- Generation Time: Jan 22, 2024 at 06:34 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -212,17 +212,19 @@ CREATE TABLE IF NOT EXISTS `products` (
   `description` text NOT NULL,
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`product_id`, `name`, `qty`, `price`, `img`, `description`, `category`) VALUES
-(1, 'Product1', 12, '200.00', 'assets/imgs/default_product_img.png', 'Description1', 'tapet'),
-(2, 'Product2', 8, '370.00', 'assets/imgs/default_product_img.png', 'Description2', 'Tapet'),
+(1, 'Product1', 12, '314.00', 'assets/imgs/default_product_img.png', 'Description1ss1231', 'tapet'),
+(2, 'Product221', 8, '373.00', 'assets/imgs/default_product_img.png', 'Description2asas', 'Tapet'),
 (3, 'Product3', 2, '120.00', 'assets/imgs/default_product_img.png', 'Test img', 'Carpet'),
-(4, 'test22', 15, '222.00', 'assets/imgs/default_product_img.png', 'asdfasdf', 'Sale');
+(4, 'test22', 15, '222.00', 'assets/imgs/default_product_img.png', 'asdfasdf', 'Sale'),
+(7, '5', 73, '10.00', 'assets/imgs/default_product_img.png', '6', ''),
+(13, 'testzz', 131, '141.00', 'assets/imgs/default_product_img.png', '121', '');
 
 -- --------------------------------------------------------
 
