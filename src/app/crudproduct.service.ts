@@ -14,11 +14,11 @@ export class CRUDProductService {
   // Create
   createProduct(productData: Product): Observable<any> {
     const formData = new FormData();
-    formData.append('name', productData.name);
-    formData.append('description', productData.description);
-    formData.append('qty', productData.qty.toString());
-    formData.append('price', productData.price.toString());
-    return this.http.post(`${this.apiUrl}/create.php`, formData);
+    if (productData.name) formData.append('name', productData.name);
+    if (productData.description) formData.append('description', productData.description);
+    if (productData.qty) formData.append('qty', productData.qty.toString());
+    if (productData.price) formData.append('price', productData.price.toString());
+        return this.http.post(`${this.apiUrl}/create.php`, formData);
   }
 
   // Read
@@ -29,12 +29,11 @@ export class CRUDProductService {
   // Update
   updateProduct(productData: Product): Observable<any> {
     const formData = new FormData();
-    if (productData.product_id !== undefined) {
-      formData.append('id', productData.product_id.toString());
-  }    formData.append('name', productData.name);
-    formData.append('description', productData.description);
-    formData.append('price', productData.price.toString());
-    formData.append('qty', productData.qty.toString());
+    if (productData.product_id) formData.append('id', productData.product_id.toString());
+    if (productData.name) formData.append('name', productData.name);
+    if (productData.description) formData.append('description', productData.description);
+    if (productData.price) formData.append('price', productData.price.toString());
+    if (productData.qty) formData.append('qty', productData.qty.toString());
 
     return this.http.post(`${this.apiUrl}/update.php`, formData);
   }

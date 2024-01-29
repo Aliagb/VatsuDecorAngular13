@@ -12,12 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent {
-  product = {
-    name: '',
-    description: '',
-    qty : 1,
-    price: 0
-  };
+  product: Product;
+
 
   constructor(
     private crudProductService: CRUDProductService,

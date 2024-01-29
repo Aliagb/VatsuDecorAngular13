@@ -23,6 +23,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -34,6 +35,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ProductAddComponent,
     ProductEditComponent,
     ProductDetailComponent,
+    CartComponent,
+    
 
   ],
   imports: [
@@ -53,6 +56,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatInputModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    
     
   ],
   providers: [],

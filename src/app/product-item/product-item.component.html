@@ -1,5 +1,5 @@
-<mat-grid-list cols="3" gutterSize="16px">
-    <mat-grid-tile *ngFor="let product of productsItems">
+<mat-grid-list [cols]="getNumberOfColumns()">
+  <mat-grid-tile *ngFor="let product of productsItems">
       <mat-card class="product-card">
         <mat-card-header>
           <mat-card-title>{{ product.name }}</mat-card-title>
@@ -11,7 +11,7 @@
           <p class="price">{{ product.price | currency:'ILS':'symbol':'1.0-0' }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="primary">Add to Cart</button>
+          <button mat-button color="primary" (click)="addToCart(product)">Add to Cart</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>

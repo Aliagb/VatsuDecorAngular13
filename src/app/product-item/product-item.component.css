@@ -40,6 +40,9 @@
   }
   
   .product-card {
+    margin: 50px 20px;
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
