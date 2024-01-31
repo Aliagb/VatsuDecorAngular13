@@ -1,0 +1,32 @@
+[2024-01-30 08:42:28] Failed to add random product to cart: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'qty' in 'field list'
+[2024-01-30 08:43:51] Added product 19 to cart for customer 64
+[2024-01-30 08:55:07] Added product 50 to cart for customer 97
+[2024-01-30 08:57:03] Added product 36 to cart for customer 62
+[2024-01-30 09:09:25] Added product 38 to cart for customer 42
+[2024-01-30 10:39:04] Added product 24 to cart for customer 1
+[2024-01-30 10:40:55] Added product 28 to cart for customer 1
+[2024-01-30 11:10:57] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '24' for key 'cart_item.PRIMARY'
+[2024-01-30 11:11:02] Added product 34 to cart for customer 1
+[2024-01-30 11:27:22] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:27] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:28] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:28] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:29] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:29] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:27:29] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:33:17] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:33:25] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:33:26] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:33:26] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+[2024-01-30 11:34:52] Added product 4 to cart for customer 1
+[2024-01-30 11:34:58] Added product 13 to cart for customer 1
+[2024-01-30 11:35:07] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:13] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '3' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:18] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:21] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:22] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:22] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:23] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:23] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:35] Failed to add random product to cart: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '13' for key 'cart_item.PRIMARY'
+[2024-01-30 11:35:37] Added product 14 to cart for customer 1

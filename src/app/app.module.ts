@@ -24,6 +24,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CartComponent } from './cart/cart.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { CartComponent } from './cart/cart.component';
     MatInputModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    
+    MatIconModule,
+
     
   ],
   providers: [],

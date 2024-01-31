@@ -20,22 +20,16 @@ export class ProductItemComponent implements OnInit {
     private cartService: CartService )
      { }
 
-     addToCart(selectedProduct: Product) {
-      const newCartItem: CartItem = {
-        customer_id: 1, // test id=1
-        quantity: 1, // test qty=1
-        product: selectedProduct
-    };
-
-    this.cartService.addCartItem(newCartItem).subscribe(
-      response => {
-              console.log('Product added to cart:', response);
-          },
-          error => {
-              console.error('Error adding product to cart:', error);
-          }
-      );
-  }
+     addToCart(selectedProductId: number) {
+      this.cartService.addCartItem(selectedProductId).subscribe(
+        response => {
+            console.log('Product added to cart:', response);
+        },
+        error => {
+            console.error('Error adding product to cart:', error);
+        }
+    );
+}
 
   ngOnInit(): void {
     this.responsive.observe(Breakpoints.HandsetLandscape)
